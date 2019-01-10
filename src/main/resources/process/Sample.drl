@@ -1,0 +1,48 @@
+package com.unisys.drools
+ 
+import com.unisys.leida.framework.sharedobjects.client.vo.Application;
+import org.kie.api.KieServices;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
+ 
+rule "One"
+ruleflow-group "Group1"
+    when
+        a : Application(person.gender==0 && person.FirstName=="ABC" )
+      //application :Application();
+    
+    then
+        System.out.println( a.getPerson().getFirstName());
+        System.out.println( "Fingerprint LOR executed"  );
+ //        System.out.println( myApplication.getPerson.getFirstName());
+        //m.setMessage( "Fingerprint LOR executed" );
+        a.getPerson().setLastName("hello");
+        
+    //    KieServices ks = KieServices.Factory.get();
+	//		KieContainer kContainer = ks.getKieClasspathContainer();
+	//		KieSession kSession = kContainer.newKieSession("ksession-process");
+			boolean flag = true;
+	//		kSession.update(flag);
+       // update(flag );
+end
+
+rule "Two"
+ruleflow-group "Group1"
+    when
+     //   Application( status == Application.GOODBYE, myApplication : application )
+     a : Application(person.FirstName=="xyz" )
+    then
+        //System.out.println( myMessage );
+        System.out.println( "Second rule" );
+        
+end
+
+//rule "Three"
+//ruleflow-group "Group1"
+//    when
+//        Application( status == Application.GOODBYE, myApplication : application )
+//    then
+        //System.out.println( myMessage );
+//        System.out.println( "Facial LOR executed" );
+        
+//end
