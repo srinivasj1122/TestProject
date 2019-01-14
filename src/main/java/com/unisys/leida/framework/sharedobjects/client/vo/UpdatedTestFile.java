@@ -6,12 +6,35 @@ package com.unisys.leida.framework.sharedobjects.client.vo;
 
 public class UpdatedTestFile implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public UpdatedTestFile() {
-    }
+	@org.kie.api.definition.type.Label(value = "Id")
+	private java.lang.Integer id;
+	@org.kie.api.definition.type.Label(value = "UName")
+	private java.lang.String uName;
 
+	public UpdatedTestFile() {
+	}
 
+	public java.lang.Integer getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Integer id) {
+		this.id = id;
+	}
+
+	public java.lang.String getuName() {
+		return this.uName;
+	}
+
+	public void setuName(java.lang.String uName) {
+		this.uName = uName;
+	}
+
+	public UpdatedTestFile(java.lang.Integer id, java.lang.String uName) {
+		this.id = id;
+		this.uName = uName;
+	}
 
 }
