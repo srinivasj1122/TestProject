@@ -6,12 +6,47 @@ package com.unisys.leida.framework.sharedobjects.client.vo;
 
 public class TestDataFile implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public TestDataFile() {
-    }
+	@org.kie.api.definition.type.Label(value = "Id")
+	private java.lang.Integer id;
+	@org.kie.api.definition.type.Label(value = "SName")
+	private java.lang.String sName;
+	@org.kie.api.definition.type.Label(value = "SRollNumber")
+	private java.lang.Integer sRollNumber;
 
+	public TestDataFile() {
+	}
 
+	public java.lang.Integer getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Integer id) {
+		this.id = id;
+	}
+
+	public java.lang.String getsName() {
+		return this.sName;
+	}
+
+	public void setsName(java.lang.String sName) {
+		this.sName = sName;
+	}
+
+	public java.lang.Integer getsRollNumber() {
+		return this.sRollNumber;
+	}
+
+	public void setsRollNumber(java.lang.Integer sRollNumber) {
+		this.sRollNumber = sRollNumber;
+	}
+
+	public TestDataFile(java.lang.Integer id, java.lang.String sName,
+			java.lang.Integer sRollNumber) {
+		this.id = id;
+		this.sName = sName;
+		this.sRollNumber = sRollNumber;
+	}
 
 }
